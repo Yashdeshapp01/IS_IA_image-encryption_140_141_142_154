@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Image Encryption Tool</title>
+    <style>
+      /* Navbar styles */
+      .navbar {
+        background-color: #333;
+        color: rgb(139, 211, 242);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      /* Form container styles */
+      .form-container {
+        display: inline-block;
+        width: 45%;
+        padding: 20px;
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 20px;
+      }
+
+      /* Submit button styles */
+      input[type="submit"] {
+        background-color: #a36363;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      /* File input styles */
+      input[type="file"] {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <span>Image Encryption Tool</span>
+    </div>
+    <div class="form-container">
+      <h2>Encrypt an Image</h2>
+      <form method="POST" action="/encrypt" enctype="multipart/form-data">
+        <input type="file" name="file"><br><br>
+        <input type="submit" value="Encrypt">
+      </form>
+    </div>
+    <div class="form-container">
+      <h2>Decrypt an Image</h2>
+      <form method="POST" action="/decrypt" enctype="multipart/form-data">
+        <input type="file" name="file"><br><br>
+        <input type="submit" value="Decrypt">
+      </form>
+    </div>
+  </body>
+</html>
